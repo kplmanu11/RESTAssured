@@ -13,7 +13,7 @@ public class postMethodAutomate {
 		//then: validate api response, like the status code
 		
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
-		given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
+	String responseApI = 	given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
 		.body("{\r\n"
 				+ "  \"location\": {\r\n"
 				+ "    \"lat\": -38.383494,\r\n"
@@ -30,9 +30,12 @@ public class postMethodAutomate {
 				+ "  \"website\": \"http://google.com\",\r\n"
 				+ "  \"language\": \"French-IN\"\r\n"
 				+ "}\r\n"
-				+ "").when().post("maps/api/place/add/json").then().log().all().assertThat().statusCode(200).
+				+ "").when().post("maps/api/place/add/json").then().assertThat().statusCode(200).
 					//adding some more validation for the assertion 
-		      body("scope",equalTo("APP")).header("server", "Apache/2.4.41 (Ubuntu)");
+		      body("scope",equalTo("APP")).header("server", "Apache/2.4.41 (Ubuntu)").extract().response().asString();
+	
+	
+	 	System.out.println(responseApI);
 	}
 	
 
