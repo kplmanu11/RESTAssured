@@ -1,5 +1,6 @@
 import io.restassured.RestAssured;
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
 
 public class postMethodAutomate {
 
@@ -29,7 +30,9 @@ public class postMethodAutomate {
 				+ "  \"website\": \"http://google.com\",\r\n"
 				+ "  \"language\": \"French-IN\"\r\n"
 				+ "}\r\n"
-				+ "").when().post("maps/api/place/add/json").then().log().all().assertThat().statusCode(200);
+				+ "").when().post("maps/api/place/add/json").then().log().all().assertThat().statusCode(200).
+					//adding some more validation for the assertion 
+		      body("scope",equalTo("APP")).header("server", "Apache/2.4.41 (Ubuntu)");
 	}
 	
 
