@@ -41,7 +41,7 @@ public class postPutGetScenario {
 		// GET Automation
 
 		String GETResponsemsg = given().queryParam("key", "qaclick123").queryParam("place_id", placeID)
-				.header("Content-Type", "application/json").when().get("maps/api/place/get/json").then().log().all()
+				.when().get("maps/api/place/get/json").then().log().all()
 				.assertThat().statusCode(200).extract().response().asString();
 
 		JsonPath jj = new JsonPath(GETResponsemsg);
