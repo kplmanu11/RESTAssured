@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="parsingComplexJSON.Scenario6">
+      <class name="libraryAPI.addingSpecificBook">
         <methods>
-          <include name="SC6"/>
+          <include name="AddingSpecificBook"/>
         </methods>
-      </class> <!-- parsingComplexJSON.Scenario6 -->
+      </class> <!-- libraryAPI.addingSpecificBook -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

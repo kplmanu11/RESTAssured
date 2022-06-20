@@ -1,6 +1,5 @@
 package parsingComplexJSON;
 
-import org.testng.Assert;
 
 import files.payload;
 import io.restassured.path.json.JsonPath;
