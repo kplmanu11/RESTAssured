@@ -1,0 +1,2 @@
+This is the rest api testing 
+Use of multipart method in the rest api

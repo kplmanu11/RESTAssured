@@ -7,7 +7,6 @@ import static io.restassured.RestAssured.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class readingStaticJSONfromExternalLocation {
@@ -18,7 +17,7 @@ public class readingStaticJSONfromExternalLocation {
 	@Test
 	public void readStaticJSONFile() throws IOException {
 		RestAssured.baseURI = "http://216.10.245.166";
-		String resp = given().header("Content-Type", "application/json").
+		given().header("Content-Type", "application/json").
 				body(GenerateStringFromResource("C:\\users\\kapil.neupane\\documents.addbookdetails.json")).
 		when().post("/Library/Addbook.php").
 		then().assertThat().statusCode(200)
