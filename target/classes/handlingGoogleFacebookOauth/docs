@@ -1,0 +1,12 @@
+There different types of the grant types in the oAuth2.0
+
+Out of them AUthorization code and the client credentials are the mostly used 
+
+In Authorizaton code type authorization mechanism the authorization code is needed and those are passed. for example
+if the user needs some redirection then in this case these are used. and this is more used
+
+In client credential authorization mechanism the authorization code is not need and rest are same
+if we need to request own data and no redirection happend then in this case those are used.
+
+
+
