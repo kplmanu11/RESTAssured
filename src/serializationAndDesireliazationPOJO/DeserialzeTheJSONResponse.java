@@ -62,6 +62,7 @@ public class DeserialzeTheJSONResponse {
 		
 		//find all the title of the courses of webautomation
 		//Excepted courses
+		//deserialiaze-- converting to the java objects and using the getters method
 		String[] courseTitle = {"Selenium","Cypress","Protractor"};
 		
 		ArrayList<String> a = new ArrayList<String>();
